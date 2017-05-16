@@ -78,6 +78,11 @@ paths:
           description: The ciient id
           required: false
           type: string
+        - name: code_card
+          in: query
+          description: client in the given code card
+          required: false
+          type: string
         - $ref: "#/parameters/Token"
       responses:
         "200":

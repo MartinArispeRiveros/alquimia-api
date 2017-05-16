@@ -39,7 +39,7 @@ function getOne(req, res) {
 }
 
 function getAll(req, res) {
-    var filter  =  req.swagger.params.filter;
+    var filter  =  req.swagger.params.code_card.originalValue;
     var query = model.knex('client').select(model.knex.raw('*'));
     if (filter) {
         query.where(model.knex.raw('code_card'), '=', filter)
